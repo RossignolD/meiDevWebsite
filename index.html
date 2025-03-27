@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="modals.js"></script>
+    <title>Mei Rose Connor's Website</title>
+  </head>
+  <body>
+    <h1>Welcome to Mei Rose Connor's Website</h1>
+    <nav>
+      <button>Home</button>
+      <button>Projects</button>
+      <button>Skills</button>
+      <button>Contact Me</button>
+    </nav>
+
+    <h2>
+      Hi, I'm Mei Rose, an independent scholar of Formal Logic, a web developer,
+      and a cat lover who owns no cats.
+    </h2>
+    <p>
+      I studied Mathematics and Linguistics in my undergraduate degree program
+      at Stony Brook University, and have now shifted my focus towards finding
+      ways of sharing the joy of Mathematics and Formal Logic with students of
+      all ages through interactive software applications. I like to find the
+      intersections between my interests and the creative arts, and yes, it's
+      true, I love cats but own none.
+    </p>
+
+    <p>
+      This site is full of projects in progress, projects completed, and other
+      things I've made or are working on for fun. Feel free to navigate between
+      section using the buttons provided at the top and bottom of every section.
+    </p>
+
+    <nav>
+      <button>Home</button>
+      <button>Projects</button>
+      <button>Skills</button>
+      <button>Contact Me</button>
+    </nav>
+
+    <h2>Projects, Current and Past.</h2>
+    <div>
+      <h3>Current Projects</h3>
+      <div class="flex-container projects">
+        <div class="project">
+            <h4>Magic 15 Python Game</h4>
+          <p>
+            This game, isomorphic to tic-tac-toe or Noughts and Crosses, asks two players
+            to take turns choosing numbers between 1 and 9 inclusive with a goal of selecting
+            numbers that sum to 15 before the other player does. It was written in Python
+            and runs on the CMU_Graphics package, which itself is built on the pygame package. 
+            Features to be developed include a recusive algorithm for checking whether a win is possible
+            at all after each player takes their turn, and an improved UI.
+          </p>
+          <div id="magic-15-modal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Some text in the Modal..</p>
+            </div>
+          </div>
+
+          <button class="details-button" id = "magic-15-details">View Details</button> 
+          <button>View Project</button>
+        </div>
+        <div class="project">
+            <h4>Kalish-Montague-Mar Natural Deduction LaTeX Formatter</h4>
+          <p>
+            An idea that I've been working on for a while, this code takes a KMM
+            natural deduction given in a plaintext format and turns it into the appropriate
+            boxed-and-cancelled natural deduction one expects from the KMM style, just
+            in a format that is readable into a LaTeX document. So far, it is undecided
+            whether it will do this via TikZ or by producing a vector graphics file. The hard
+            part of this project has been standardizing the plaintext representations of deductions.
+          </p>
+          <div id="kmm-modal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Some text in the Modal..</p>
+            </div>
+          </div>
+          <button class="details-button" id = "kmm-details">View Details</button> 
+          <button>View Project</button>
+        </div>
+        <div class="project">
+            <h4>Admintopia</h4>
+          <p>
+            Admintopia is a satirical incrememtal clicker game themed around the 
+            seemingly-endless number of administrative staff hired at modern American
+            univeristies. The user can click to admit undergraduate students, whose
+            tuition goes solely to paying the salaries of increasingly higher-ranked
+            administrators. Undergraduate student tuition can also pay for Masters students,
+            whose tuition can in turn pay doctoral students. And various numbers of these types of
+            students are required for the "privilege" of hiring higher-ranked admins.
+          </p>
+          <div id="admintopia-modal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Some text in the Modal..</p>
+            </div>
+          </div>
+          <button class="details-button" id = "admintopia-details">View Details</button> 
+          <button>View Project</button>
+        </div>
+        <div class="project">
+            <h4>This Site</h4>
+          <p>
+            this site is a project as well! It is currently being developed as a part
+            of the Carnegie Mellon University Techbridge Bootcamp. Expect more exciting
+            features soon, like photos and screenshots for projects, elaborate CSS styling,
+            a contact form, and more. There might even be some Easter Eggs added for those who
+            wish to look for them...
+          </p>
+          <div id="this-site-project-modal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Some text in the Modal..</p>
+            </div>
+          </div>
+          <button class="details-button" id = "this-site-project-details">View Details</button> 
+          <button>View Project</button>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h3>Past Projects</h3>
+      <div class="flex-container projects">
+        <div class="project">
+            <h4>DragLogic</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+            explicabo dolore nostrum aut eaque consequatur possimus, voluptatum
+            minus? Rem in obcaecati eveniet quod explicabo repellat nisi
+            voluptatem possimus quam. Omnis?
+          </p>
+          <button>View Details</button> 
+          <button>View Project</button>
+        </div>
+        <div class="project">
+            <h4>Hermit</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque
+            dolor doloribus natus facilis voluptate autem quo at dignissimos
+            quae, repellat praesentium ut perferendis, rem eaque similique,
+            dolorem amet aliquid ex.
+          </p>
+          <button>View Details</button> 
+          <button>View Project</button>
+        </div>
+        <div class="project">
+            <h4>MoL-opoly: The ILLC as Boardgame</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque
+            dolor doloribus natus facilis voluptate autem quo at dignissimos
+            quae, repellat praesentium ut perferendis, rem eaque similique,
+            dolorem amet aliquid ex.
+          </p>
+          <button>View Details</button> 
+          <button>View Project</button>
+        </div>
+        <div class="project">
+            <h4>Running for Chancellor of Oxford</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque
+            dolor doloribus natus facilis voluptate autem quo at dignissimos
+            quae, repellat praesentium ut perferendis, rem eaque similique,
+            dolorem amet aliquid ex.
+          </p>
+          <button>View Details</button> 
+          <button>View Project</button>
+        </div>
+      </div>
+    </div>
+
+    <h2>Skills, Software and Otherwise</h2>
+    <div>
+        <div class="flex-container skills">
+            <div><h3>Software Skills</h3></div>
+            <div><h3>Interpersonal Skills</h3></div>
+            <div><h3>Language Proficiency</h3></div>
+            <div><h3>Hobbies</h3></div>
+        </div>
+    </div>
+    <h2>Contact Mei Rose Connor</h2>
+
+  </body>
+</html>
