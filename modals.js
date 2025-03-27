@@ -1,28 +1,37 @@
-    // Get the modal
-const modals= document.getElementsByClassName("modal")
+// Get the modal
+const buttons = document.getElementsByClassName("details-button");
 
-const buttons = document.getElementsByClassName("details-button")
+const modalTitle = document.getElementById("modal-title");
+const modalDescription = document.getElementById("modal-description");
+const modalBackground= document.getElementById("modal-background")
 
-buttons.addEventListener("click", (event)=>{
-    const currentTarget = event.currentTarget.getAttribute("id")
-    return currentTarget
-})
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+function makeButtonsClickable(buttons) {
+  for (let button of buttons) {
+    button.addEventListener("click", (event) => {
+      console.log(event.target.getAttribute("id"))
+      openModal(button)
+    });
+  }
+}
 
-    // When the user clicks the button, open the modal 
-    btn.onclick = function() {
-      modal.style.display = "block";
-    }
+document.querySelector(".close").addEventListener("click", closeModal);
 
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
+function openModal(button){
+  const project = button.closest(".project");
+  console.log(project)
+  modalTitle.textContent = project.dataset.title;
+  modalDescription.textContent = project.dataset.description;
+  modalBackground.classList.remove("hidden");
+}
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
+window.onclick = function(event) {
+  if (event.target == modalBackground) {
+    closeModal()
+  }
+}
+
+function closeModal() {
+  modalBackground.classList.add("hidden");
+}
+
+makeButtonsClickable(buttons)

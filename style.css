@@ -1,49 +1,67 @@
+h1, h2, h3, h4{
+  font-family: Baskervville, serif;
+  color: rgb(96, 24, 96)
+}
+
+h2{
+  font-family: Baskervville, serif;
+}
+
+body{
+  background-color: rgb(226, 209, 232)
+}
+
+p{
+  font-family: Noto Sans;
+}
+
+button{
+  font-family: Noto Sans;
+  background-color: rgb(214, 159, 234);
+  border-color: purple;
+}
+
 .flex-container{
    display: flex;
    flex-direction: row;
-   height: 100%;
+   justify-content: space-between;
 }
 
 .project{
-    padding-left: 3rem;
-    padding-right: 3rem;
-}
+  flex: 1 1 0px;
+  padding-left: 2rem;
+  padding-right: 2rem
 
+}
 .skills{
     justify-content: space-between;
 }
 
-    /* Hidden by default */
-    .modal {
-        display: none; 
-        position: fixed; 
-        z-index: 1; 
-        left: 0;
-        top: 0;
-        width: 100%; 
-        height: 100%; 
-        overflow: auto; 
-        background-color: rgba(0,0,0,0.4); 
-      }
-  
-      .modal-content {
-        background-color: #fefefe;
-        margin: 15% auto; 
-        padding: 20px;
-        border: 1px solid #888;
-        width: 60%; 
-      }
-  
-      .close {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-      }
-  
-      .close:hover,
-      .close:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-      }
+.hidden{
+  display: none;
+}
+
+#modal-box{
+    background: rgb(214, 159, 234);
+    position: absolute;
+    float: left;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+}
+
+#modal-background {
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; }
+
+  .close{
+    float: right;
+}
