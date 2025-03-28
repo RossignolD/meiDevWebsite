@@ -12,13 +12,19 @@ body{
 }
 
 p{
-  font-family: Noto Sans;
+  font-family: Noto Sans Symbols;
+  line-height: 1.15rem;
 }
 
 button{
-  font-family: Noto Sans;
+  font-family: Noto Sans Symbols;
   background-color: rgb(214, 159, 234);
   border-color: purple;
+}
+
+button.active{
+    background-color: purple;
+    color: white;
 }
 
 .flex-container{
@@ -27,14 +33,11 @@ button{
    justify-content: space-between;
 }
 
-.project{
+.project,.skill{
   flex: 1 1 0px;
   padding-left: 2rem;
   padding-right: 2rem
 
-}
-.skills{
-    justify-content: space-between;
 }
 
 .hidden{
@@ -64,4 +67,159 @@ button{
 
   .close{
     float: right;
+}
+
+.carousel-container {
+    width: inherit;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .carousel-slide {
+    display: none; /* Hide all slides initially */
+  }
+
+  .carousel-slide img {
+    width: 100%;
+    height: auto;
+  }
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    /* margin-top: -22px; */
+    /* padding: 16px; */
+    color: rgb(96, 24, 96);
+    font-weight: bold;
+    font-size: 1rem;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev:hover, .next:hover {
+    background-color:rgba(214, 159, 234, 0.7)
+  }
+
+  .dot-container {
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .dot {
+    cursor: pointer;
+    height: .5rem;
+    width: .5rem;
+    margin: 0 2px;
+    background-color: rgb(214, 159, 234);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active, .dot:hover {
+    background-color: purple;
+  }
+
+  .progress-container {
+    width: 100%;
+    background-color: rgba(214, 159, 234, 0.7);
+    border-radius: 5px;
+  }
+
+  .progress-bar {
+    height: 1.5rem;
+    padding-left: 0.5rem;
+    align-content: center;
+    background-color: purple;
+    border-radius: 5px;
+    color: white;
+    font-family: Noto Sans Symbols;
+    font-size: .75rem;
+  }
+
+  .progress-bar#htmlBar{
+    width: 80%;
+  }
+
+  .progress-bar#jsBar{
+    width: 60%;
+  }
+
+  .progress-bar#pythonBar{
+    width: 70%;
+  }
+
+  .progress-bar#latexBar{
+    width: 90%;
+  }
+
+  .progress-bar#vscodeBar{
+    width: 80%;
+  }
+
+  .progress-bar#nodeBar{
+    width: 50%;
+  }
+
+  .progress-bar#mathematicaBar{
+    width: 40%;
+  }
+
+  .progress-bar#inkscapeBar{
+    width: 60%;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+td {
+    border: none;
+    text-align: center;
+    padding: 8px;
+    font-family: Noto Sans Symbols;
+  }
+
+  th {
+    background-color: rgb(214, 159, 234);
+    color: black;
+    cursor: pointer;
+    font-size: 1.3em;
+    font-family: Noto Sans Symbols;
+    line-height: 1.6rem;
+    padding: .75rem;
+  }
+
+  * {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-family: Baskervville, serif;
+}
+
+label{
+    font-family: Noto Sans Symbols;
+}
+.error{
+font-family: Noto Sans Symbols;
+color: red;
+}
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
 }

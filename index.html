@@ -14,6 +14,10 @@
       href="https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Baskervville:ital@0;1&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <title>Mei Rose Connor's Website</title>
   </head>
   <body>
@@ -191,8 +195,10 @@
         <div class="project">
           <h4>Running for Chancellor of Oxford</h4>
           <p>
-            Yes, I really did do this. I received 26 votes in total, nowhere near the number needed to advance
-            into the second round of elections, but still consider it an exercise in chasing those wild dreams!
+            Yes, I really did do this. I received 26 votes in total, nowhere
+            near the number needed to advance into the second round of
+            elections, but still consider it an exercise in chasing those wild
+            dreams!
           </p>
           <button>View Details</button>
           <button>View Project</button>
@@ -200,16 +206,169 @@
       </div>
     </div>
 
+    <h2>Project Timeline</h2>
+
+    <table>
+      <thead>
+        <th>Project</th>
+        <th>Project Start</th>
+        <th>Project End</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>DragLogic</td>
+          <td>October 2019</td>
+          <td>April 2022</td>
+        </tr>
+        <tr>
+          <td>Hermit</td>
+          <td>February 2020</td>
+          <td>May 2020</td>
+        </tr>
+        <tr>
+          <td>MoL-opoly</td>
+          <td>December 2022</td>
+          <td>January 2023</td>
+        </tr>
+        <tr>
+          <td>Admintopia</td>
+          <td>October 2023</td>
+          <td>(ongoing)</td>
+        </tr>
+        <tr>
+          <td>KMM LaTeX Formatter</td>
+          <td>January 2024</td>
+          <td>(ongoing)</td>
+        </tr>
+        <tr>
+          <td>Chancellorship candidacy</td>
+          <td>November 2024</td>
+          <td>December 2024</td>
+        </tr>
+        <tr>
+          <td>Magic 15</td>
+          <td>February 2025</td>
+          <td>(ongoing)</td>
+        </tr>
+        <tr>
+          <td>This Site Development</td>
+          <td>March 2025</td>
+          <td>(ongoing)</td>
+        </tr>
+      </tbody>
+    </table>
+
     <h2>Skills, Software and Otherwise</h2>
     <div>
       <div class="flex-container skills">
-        <div><h3>Software Skills</h3></div>
-        <div><h3>Interpersonal Skills</h3></div>
-        <div><h3>Language Proficiency</h3></div>
-        <div><h3>Hobbies</h3></div>
+        <div class="skill">
+          <div class="tab">
+            <button class="tablinks active" onclick="openTab(event, 'Tab1')">
+              Programming Languages
+            </button>
+            <button class="tablinks" onclick="openTab(event, 'Tab2')">
+              Applications
+            </button>
+            <button class="tablinks" onclick="openTab(event, 'Tab3')">
+              Interpersonal Skills
+            </button>
+            <button class="tablinks" onclick="openTab(event, 'Tab4')">
+              Natural Languages
+            </button>
+            <button class="tablinks" onclick="openTab(event, 'Tab5')">
+              Hobbies
+            </button>
+          </div>
+
+          <div id="Tab1" class="tabcontent" style="display: block">
+            <h3>Programming Languages</h3>
+            <p>HTML/CSS</p>
+            <div class="progress-container">
+              <div class="progress-bar" id="htmlBar">80%</div>
+            </div>
+            <p>JavaScript</p>
+            <div class="progress-container">
+              <div class="progress-bar" id="jsBar">60%</div>
+            </div>
+            <p>Python</p>
+            <div class="progress-container">
+              <div class="progress-bar" id="pythonBar">70%</div>
+            </div>
+            <p>LaTeX</p>
+            <div class="progress-container">
+              <div class="progress-bar" id="latexBar">90%</div>
+            </div>
+          </div>
+
+          <div id="Tab2" class="tabcontent" style="display: none">
+            <h3>Software Applications and Tools</h3>
+            <p>VSCode</p>
+            <div class="progress-container">
+              <div class="progress-bar" id="vscodeBar">80%</div>
+            </div>
+            <p>Node.js</p>
+            <div class="progress-container">
+              <div class="progress-bar" id="nodeBar">50%</div>
+            </div>
+            <p>Wolfram Mathematica</p>
+            <div class="progress-container">
+              <div class="progress-bar" id="mathematicaBar">40%</div>
+            </div>
+            <p>Inkscape</p>
+            <div class="progress-container">
+              <div class="progress-bar" id="inkscapeBar">60%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Tab3" class="tabcontent" style="display: none">
+        <div class="skill">
+          <h3>Interpersonal Skills</h3>
+          <p>Networking</p>
+          <p>Creativity and brainstorming</p>
+          <p>Interconnecting disciplines</p>
+        </div>
+        </div>
+      </div>
+      <div id="Tab4" class="tabcontent" style="display: none">
+        <div class="skill">
+          <h3>Natural Language Proficiency</h3>
+          <p>English (native)</p>
+          <p>French (intermediate)</p>
+          <p>German (novice)</p>
+          <p>Latin (intermediate)</p>
+          <p>Ancient Greek (novice, can read Euclid)</p>
+        </div>
+      </div>
+      <div id="Tab5" class="tabcontent" style="display: none">
+      <div class="skill">
+        <h3>Hobbies</h3>
+        <p>Calligraphy</p>
+        <p>Baking</p>
+        <p>Watercolor painting</p>
       </div>
     </div>
     <h2>Contact Mei Rose Connor</h2>
+
+    
+  <form id="myForm" onsubmit="return validateForm()">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="name" id="name" name="name" required>
+      <span class="error" id="nameError"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <span class="error" id="emailError"></span>
+    </div>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" placeholder="Write a message to Mei Rose Connor" style="height:200px"></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
 
     <div id="modal-background" class="hidden">
       <div id="modal-box">
@@ -218,6 +377,11 @@
         <p id="modal-description">Description of My Project</p>
       </div>
     </div>
+
+
     <script src="modals.js"></script>
+    <script src="carousel.js"></script>
+    <script src="tabs.js"></script>
+    <script src="formValidator.js"></script>
   </body>
 </html>
